@@ -9,9 +9,11 @@
     href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.3/dist/tailwind.min.css"
     rel="stylesheet"
   />
+  <link href="style.css" rel="stylesheet"/>
 </head>
 <body class="bg-blue-100 flex flex-col min-h-screen">
   <div class="flex-grow container mx-auto py-6 px-4">
+    <div class="new-heading"><h2>Talk with Hammad</h2> </div>
     <div class="h-full w-full max-w-2xl mx-auto">
       <div id="chatbox" class="flex flex-col items-start overflow-y-auto h-full p-1 rounded"></div>
     </div>
@@ -37,7 +39,7 @@
               class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full sm:w-auto"
               id="sendButton"
             >
-              Ask Dom!
+              Ask with Hammad
             </button>
           </div>
         </div>
@@ -96,12 +98,12 @@
       websocket.onclose = (event) => {
         if (event.code === 1000) {
           receiving = false;
-          sendButton.textContent = "Ask Dom!";
+          sendButton.textContent = "Ask with Hammad";
         } else {
           messageElement.textContent += "Error getting response from server. Refresh the page and try again.";
           chatbox.scrollTop = chatbox.scrollHeight;
           receiving = false;
-          sendButton.textContent = "Ask Dom!";
+          sendButton.textContent = "Ask with Hammad";
         }
       };
     }
